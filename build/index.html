@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tic Tac Toe Vol.2</title>
+  </head>
+
+  <body
+    class="min-h-screen flex flex-col bg-stone-300 dark:bg-stone-950 text-stone-900 dark:text-white font-sf font-normal"
+  >
+    <!-- WELCOME OVERLAY -->
+    <div
+      id="welcome-overlay"
+      class="overlay flex flex-col min-h-screen absolute inset-0 bg-sky-950 bg-opacity-90 backdrop-blur-sm items-center justify-center text-center text-white sm:text-lg hidden"
+    >
+      <h1 class="text-4xl sm:text-6xl font-bold my-4">Tic Tac Toe Vol.2</h1>
+      <p class="mb-4 w-2/3">
+        This is a advanced version of the popular game Tic Tac Toe.
+      </p>
+      <p
+        class="my-4 w-4/5 sm:w-3/5 lg:w-2/5 text-sm text-justify sm:text-center"
+      >
+        <span class="font-bold block text-center"> Rules: </span>
+        Players take turns placing their marks in empty squares on the grid.
+        After each player has placed three marks, their oldest mark is
+        automatically removed when they place a new one. The objective is to
+        align three of your marks in a row — vertically, horizontally, or
+        diagonally. The first player to achieve this wins the game!
+        <br />
+        <span class="block my-6 font-bold text-center">
+          May the best player win!
+        </span>
+      </p>
+      <button
+        id="begin"
+        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+      >
+        BEGIN
+      </button>
+    </div>
+
+    <!-- GAME -->
+    <div class="flex-grow flex flex-col items-center justify-center space-y-3">
+      <h1 class="font-bold text-4xl sm:text-6xl sm:p-8">Tic Tac Toe Vol.2</h1>
+      <h3 id="turn" class="font-semibold text-xl sm:text-2xl text-yellow-600">
+        Player X turn
+      </h3>
+
+      <div
+        id="board"
+        class="grid grid-cols-3 gap-0 py-6"
+      >
+        <!-- Row 1 -->
+        <div
+          id="11"
+          class="flex justify-center items-center border-b-2 border-r-2 border-stone-500 text-2xl w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+        <div
+          id="12"
+          class="flex justify-center items-center border-b-2 border-r-2 border-stone-500 text-2xl w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+        <div
+          id="13"
+          class="flex justify-center items-center border-b-2 border-stone-500 text-2xl p-0 w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+
+        <!-- Row 2 -->
+        <div
+          id="21"
+          class="flex justify-center items-center border-b-2 border-r-2 border-stone-500 text-2xl w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+        <div
+          id="22"
+          class="flex justify-center items-center border-b-2 border-r-2 border-stone-500 text-2xl w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+        <div
+          id="23"
+          class="flex justify-center items-center border-b-2 border-stone-500 text-2xl w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+
+        <!-- Row 3 -->
+        <div
+          id="31"
+          class="flex justify-center items-center border-r-2 border-stone-500 text-2xl w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+        <div
+          id="32"
+          class="flex justify-center items-center border-r-2 border-stone-500 text-2xl w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+        <div
+          id="33"
+          class="flex justify-center items-center text-2xl p-0  w-28 h-28 sm:w-32 sm:h-32"
+        ></div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-800 dark:bg-stone-600 text-stone-50 w-full">
+      <div
+        class="container mx-auto text-center py-4 flex flex-col items-center sm:items-start sm:flex-row sm:justify-between sm:space-x-4"
+      >
+        <section id="left" class="my-2 sm:text-left">
+          <h2 class="font-bold">Tic Tac Toe Vol.2</h2>
+          <p>
+            Contact:
+            <a
+              href="mailto:support@mail.com"
+              class="underline hover:text-stone-500"
+              >support@mail.com</a
+            >
+          </p>
+        </section>
+        <section id="right" class="my-4">
+          <a href="https://github.com/xmilicax" target="_blank">
+            <svg
+              class="w-8 h-8 text-white transition-colors duration-300 hover:fill-stone-500"
+              fill="white"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.892 1.528 2.341 1.087 2.912.831.092-.647.35-1.087.636-1.337-2.22-.252-4.555-1.111-4.555-4.944 0-1.091.39-1.982 1.029-2.68-.103-.253-.446-1.27.098-2.645 0 0 .84-.269 2.75 1.025a9.564 9.564 0 012.5-.336c.848.004 1.703.115 2.5.337 1.91-1.294 2.75-1.025 2.75-1.025.546 1.375.203 2.392.1 2.645.64.698 1.028 1.589 1.028 2.68 0 3.842-2.337 4.687-4.565 4.935.36.31.678.923.678 1.86 0 1.343-.012 2.427-.012 2.755 0 .269.18.579.688.481C19.137 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+          </a>
+        </section>
+      </div>
+
+      <div class="flex justify-around bg-black py-2 text-xs sm:text-sm">
+        <p id="copyright">
+          Copyright &copy; Milica Lazić
+          <span id="year"></span>
+          <span>All rights reserved</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
