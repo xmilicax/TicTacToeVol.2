@@ -59,7 +59,4 @@
                "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.justify-center-last {
-    text-align: justify; /* Justifies all lines */
-    text-align-last: center; /* Centers the last line */
-}
+

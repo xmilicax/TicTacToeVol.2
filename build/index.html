@@ -15,7 +15,7 @@
     <!-- WELCOME OVERLAY -->
     <div
       id="welcome-overlay"
-      class="overlay flex flex-col min-h-screen absolute inset-0 bg-sky-950 bg-opacity-90 backdrop-blur-sm items-center justify-center text-center text-white sm:text-lg hidden"
+      class="overlay flex flex-col min-h-screen absolute inset-0 bg-sky-950 bg-opacity-90 backdrop-blur-sm items-center justify-center text-center text-white sm:text-lg"
     >
       <h1 class="text-4xl sm:text-6xl font-bold my-4">Tic Tac Toe Vol.2</h1>
       <p class="mb-4 w-2/3">
@@ -46,6 +46,9 @@
     <!-- GAME -->
     <div class="flex-grow flex flex-col items-center justify-center space-y-3">
       <h1 class="font-bold text-4xl sm:text-6xl sm:p-8">Tic Tac Toe Vol.2</h1>
+
+      <div id="score" class="flex font-bold text-2xl bg-yellow-600 bg-opacity-70 text-stone-50 rounded-xl p-2"></div>
+
       <h3 id="turn" class="font-semibold text-xl sm:text-2xl text-yellow-600">
         Player X turn
       </h3>
@@ -96,7 +99,9 @@
           class="flex justify-center items-center text-2xl p-0  w-28 h-28 sm:w-32 sm:h-32"
         ></div>
       </div>
-    </div>
+      <div id="message" class="w-80 h-8 text-sm bg-opacity-90 px-2 py-2 rounded-xl text-red-900 font-medium text-center">
+      </div>
+    </div> 
 
     <!-- FOOTER -->
     <footer class="bg-stone-800 dark:bg-stone-600 text-stone-50 w-full">
