@@ -1,3 +1,6 @@
+// script check
+console.log("success");
+
 // GLOBAL VAR
 let currentPlayer = 'X'; 
 let movesX = []; 
