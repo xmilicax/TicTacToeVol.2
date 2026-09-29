@@ -11,7 +11,7 @@ Rules are very simple:
 
 The first player to achieve this wins the game!
 
-**Technologies used**: HTML, CSS (Tailwind CSS), JavaScript
+**Technologies used**: HTML, CSS (Tailwind CSS), JavaScript 
 
 ###### [SRB]
 Aplikacija je kreirana po uzoru na popularnu Iks Oks igru za dva igrača. Specifičnost leži u tome što se potez, nakon 3 poteza, briše. 
